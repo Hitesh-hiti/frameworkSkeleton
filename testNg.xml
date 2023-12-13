@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QE Automation - QVC_US Test Suite" parallel="tests" thread-count="4" verbose="6" configfailurepolicy="continue">
+	<parameter name="deviceLocation" value="Local" />
+	<parameter name="platform" value="ANDROID" />
+	<parameter name="mobilePlatform" value="ANDROID" />
+	<parameter name="company" value="QVC" />
+	<parameter name="geo" value="US" />
+	<parameter name="osPlatform" value="MAC" />
+	<test name="HomeReg">
+	<parameter name="deviceName" value="privateDevice" />
+		<groups>
+			<run>
+				<include name = "Login"/>
+			</run>
+		</groups>
+		<packages> 
+				<package name="qvcMobile.qvc.us.android.tests.regression.HomeUS"/>
+		</packages>
+	</test>
+</suite>
